@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import BookList from './components/Book-List';
+import Header from './components/header';
+import './App.css'; // Import the CSS file
 
 const App = () => {
   const [books, setBooks] = useState([
@@ -17,17 +19,22 @@ const App = () => {
       title: "1984",
       author: "George Orwell",
       image: "/images/1984.jpg"
-    }
+    } 
   ]);
 
   return (
-    <div className="app">
-      <h1>Top 3 Bestseller Boeken</h1>
-      <BookList books={books} />
-      <h1></h1>
+    <div>
+      <div className='header'>
+        <Header />
+        <div className='bestsellers'>
+        <h1>Top 3 Bestseller Boeken</h1>
+        </div>
+      </div>
+      <div className="app">
+        <BookList books={books} />
+      </div>
     </div>
-   
   );
-}
+};
 
 export default App;

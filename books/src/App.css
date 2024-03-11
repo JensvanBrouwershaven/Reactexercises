@@ -1,0 +1,93 @@
+body {
+  background-color: rgba(83, 60, 17, 0.089);
+}
+
+.header1 {
+  display: flex; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background: linear-gradient(
+    110deg,
+    rgba(110, 80, 34, 0.9) 25%,
+    rgba(190, 133, 67, 0.8)
+  );
+  height: 6rem; /* Adding height for demonstration purposes */
+  width: 110%;
+  margin: -1rem; /* Make the header width fit the screen */
+  animation-direction: reverse;
+  animation: 1s anim-lineUp ease-out 1, fadeIn 1s;
+}
+
+.headerlist {
+  display: flex;
+  list-style-type: none;
+  margin: 0.2rem; /* Adjust margin for spacing */
+}
+
+.headerlist li {
+  margin-right: 1rem; /* Adjust spacing between list items */
+}
+
+.headerlist li:last-child {
+  margin-right: 0; /* Remove margin from the last list item */
+}
+
+.headerlist li p {
+  margin: 0.25rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 1.3rem;
+}
+.bestsellers {
+  display: flex;
+  justify-content: center;
+  animation: anim-lineUp 0.8s, fadeIn 1s ease-in;
+  margin: 2rem 0 0 0;
+}
+.app {
+  display: flex;
+  justify-content: center;
+  margin: 5.5rem 0 0 0;
+  animation: anim-lineUp2 0.8s, fadeIn 1.8s;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2.5rem 0 2.5rem;
+}
+.bookimg {
+  width: 20.3125rem;
+  height: 31.2rem;
+}
+.book-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+
+@keyframes anim-lineUp {
+  0% {
+    transform: translateY(-140%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes anim-lineUp2 {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
