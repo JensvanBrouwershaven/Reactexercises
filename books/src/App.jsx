@@ -1,39 +1,24 @@
-import React, { useState } from 'react';
-import BookList from './components/Book-List';
-import Header from './components/header';
-import './App.css'; // Import the CSS file
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import About from './Pages/About';
+import Home from './Pages/Home';
+import NoPage from './Pages/NoPage';
+import Navigation from './Pages/Navigation'; // Ensure the import path is correct
+import ErrorBoundary from './components/ErrorBoundary'; // Ensure the import path is correct
 
 const App = () => {
-  const [books, setBooks] = useState([
-    {
-      title: "The Catcher in the Rye",
-      author: "J.D. Salinger",
-      image: "/images/catcher-in-the-rye.jpg"
-    },
-    {
-      title: "To Kill a Mockingbird",
-      author: "Harper Lee",
-      image: "/images/to-kill-a-mockingbird.jpg"
-    },
-    {
-      title: "1984",
-      author: "George Orwell",
-      image: "/images/1984.jpg"
-    } 
-  ]);
-
   return (
-    <div>
-      <div className='header'>
-        <Header />
-        <div className='bestsellers'>
-        <h1>Top 3 Bestseller Boeken</h1>
-        </div>
-      </div>
-      <div className="app">
-        <BookList books={books} />
-      </div>
-    </div>
+    <ErrorBoundary>
+      <BrowserRouter>
+        <Navigation /> {/* Ensure Navigation is always visible */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
+    </ErrorBoundary>
   );
 };
 
