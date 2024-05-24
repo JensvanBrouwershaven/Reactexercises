@@ -7,14 +7,14 @@ body {
   align-items: center; /* Center vertically */
   background: linear-gradient(
     110deg,
-    rgba(110, 80, 34, 0.9) 25%,
+    rgba(110, 80, 34, 0.9) 15%,
     rgba(190, 133, 67, 0.8)
   );
   height: 6rem; /* Adding height for demonstration purposes */
-  width: 110%;
-  margin: -1rem; /* Make the header width fit the screen */
+  width: 100vw;
+  margin: -0.5rem; 
   animation-direction: reverse;
-  animation: 1s anim-lineUp ease-out 1, fadeIn 1s;
+  animation: 1.1s anim-lineUp ease-out 1, fadeIn 1s;
 }
 
 .headerlist {
@@ -40,14 +40,14 @@ body {
 .bestsellers {
   display: flex;
   justify-content: center;
-  animation: anim-lineUp 0.8s, fadeIn 1s ease-in;
-  margin: 2rem 0 0 0;
+  animation: anim-lineUp 0.8s, fadeIn 1.2s ease-in;
+  margin: 3rem 0 0 0;
 }
 .app {
   display: flex;
   justify-content: center;
   margin: 5.5rem 0 0 0;
-  animation: anim-lineUp2 0.8s, fadeIn 1.8s;
+  animation:  anim-lineUp2 0.8s, fadeIn 1.8s;
 }
 
 .book {
@@ -69,6 +69,7 @@ body {
   font-weight: 150;
   font-size:1.25rem;
   text-decoration: none;
+  margin: 0 0 0 0.5rem;
 }
 
 /* //////////////////////////////////////////////////////////////// */
