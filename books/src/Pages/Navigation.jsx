@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../App.css';
+import Search from '../components/Search';
 const Navigation = () => {
   return (
     <nav className='header1'>
