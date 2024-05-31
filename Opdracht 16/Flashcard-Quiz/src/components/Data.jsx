@@ -8,8 +8,8 @@ const Data = [
         answer:"V8",
     },
     {
-        question: "Wie is de tweede wereld oorlog begonnen",
-        answer:"Hitler",
+        question: "Wie was in de WO2 de leider van de USSR",
+        answer:"Stalin",
     },
     {
         question: "Wie is de beste docent van TCR",
@@ -20,7 +20,7 @@ const Data = [
         answer:"Praag",
     },
     {
-        question: "Wie  was het spraakpersoon voor tegen het racisme",
+        question: "Wie  was het spraakpersoon tegen racisme",
         answer:"Martin luther king",
     },
     {
