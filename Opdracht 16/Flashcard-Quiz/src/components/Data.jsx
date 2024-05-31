@@ -9,7 +9,7 @@ const Data = [
     },
     {
         question: "Wie was in de WO2 de leider van de USSR",
-        answer:"Stalin",
+        answer:"Stalinz",
     },
     {
         question: "Wie is de beste docent van TCR",
