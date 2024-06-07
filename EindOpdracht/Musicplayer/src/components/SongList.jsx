@@ -1,12 +1,15 @@
 import React from 'react';
 import Song from './Song';
 import SongData from '../Data/SongData';
+import '../App.css'; // Ensure this path is correct
 
-const SongList = () => {
+const SongList = ({ audioRefs }) => {
   return (
-    <div>
-      {SongData.map((song) => (
-        <Song key={song.id} song={song} />
+    <div className='SongListDiv'>
+      {SongData.map((song, index) => (
+        <div className='Song' key={song.id}>
+          <Song song={song} audioRef={audioRefs.current[index]} />
+        </div>
       ))}
     </div>
   );
